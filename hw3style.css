@@ -1,0 +1,109 @@
+/* Incident Response Form */
+.error-text {
+    color: red;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+footer {
+    border: 2px solid #e20707;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.header-background {
+    background-color: #e33c3c;
+    text-align: center;
+}
+
+.header-container {
+    /*header/top most */
+    display: flex;
+    align-items: center;
+    /* vertically center items */
+    justify-content: space-between;
+    /* push items to edges */
+}
+
+.header-text {
+    color: #417bcb;
+    font-size: 55px;
+    flex: 0 0 85%;
+    /* set text to 85% available page width */
+    text-decoration: none;
+}
+
+.header-text:hover {
+    color: white;
+    /* changes colors as user move mouse */
+}
+
+.incident-info-form {
+    background-color: #e33c3c;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.incident-info {
+    border: 1d0e6b; height: 100%; width: 700px; 
+    background-color: white; padding-top :17px; padding-bottom: 17px;
+    text-align: right;
+    display: flex;
+    align-items:center; 
+    justify-content: center; 
+}
+
+.incident-des {
+        border: 1d0e6b; height: 100%; width: 700px; 
+        background-color: white; padding-top :17px; padding-bottom: 17px;
+        text-align: right;
+        display: flex;
+        align-items:center; 
+        justify-content: center; 
+}
+
+.id-form {
+    background-color: black; text-align: center; padding: 10px; padding-top: 20px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+.nameField {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold; color:#417bcb;
+    display: inline-block;
+}
+.nameField label {
+    display: inline-block; width:5em;
+}
+
+.numField {
+    width: 60%;
+    text-align: center;
+}
+
+.right-image {
+    max-width: 100%; /* push image to right */
+}
+
+
+.title {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: aliceblue;
+    font-size: 22px;
+}

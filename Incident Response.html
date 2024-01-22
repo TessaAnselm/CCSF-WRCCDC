@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CCSF Incident Response Form</title>
+    <!-- This is a webpage that contains incident response form -->
+    <meta name="description" content="This form will be use to process formal incident response claim.">
+    <link rel="stylesheet" type="text/css" href="hw3style.css">    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    </head>
+
+    <body >
+        <header class = "header-background">
+            <div class="header-container">
+                <a href="Incident Response.html" target="_self" class="header-text">CCSF Incident Response Form</a> 
+                <figure>
+                <a href="https://www.ccsf.edu/" target="_self">
+                <img src="ccsf_ram.gif" alt="ccsf ram logo" width="139" class="right-image">
+                </a>
+                </figure>
+            </div>     
+        </header>
+
+        <div class="id-form">  
+            <div class="form-group">
+                <label for="reportedBy">Reported by</label>
+                <input type="text" id="reportedBy" name="reportedBy">
+            </div>
+            <div class="form-group">
+                <label for="titleRole">Title/Role</label>
+                <input type="text" id="titleRole" name="titleRole">
+            </div>
+            <div class="form-group">
+                <label for="dateOfReport">Date of Report</label>
+                <input type="date" id="dateOfReport" name="dateOfReport">
+            </div>
+            <div class="form-group">
+                <label for="incidentNumber">Incident Number</label>
+                <input type="text" id="incidentNumber" name="incidentNumber">
+            </div>
+            
+        </div>   
+
+        <div class="incident-info-form">    
+            <div> 
+                <header class="title">Incident Information</header> 
+            <div class="incident-info">
+                <form id="incidentform">
+                    <div class="form-group">
+                        <label for="incidentType">Incident Type</label>
+                        <input type="text" id="incidentType" name="incidentType">
+                    </div>
+                    <div class="form-group">
+                        <label for="dateOfIncident">Date of Incident</label>
+                        <input type="date" id="dateOfIncident" name="dateOfIncident">
+                    </div>
+                    <div class="form-group">
+                        <label for="timeOfIncident">Time of Incident</label>
+                        <input type="time" id="timeOfIncident" name="timeOfIncident">
+                    </div>
+                    <div class="form-group">
+                        <label for="dateOfDetection">Date of Detection</label>
+                        <input type="date" id="dateOfDetection" name="dateOfDetection">
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <input type="text" id="status" name="status">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location">
+                    </div>
+                    <div class="form-group">
+                        <label for="partiesInvolved">Name/Role/Contact of Parties Involved</label>
+                        <textarea type="text" id="partiesInvolved" name="partiesInvolved"></textarea>
+                    </div>  
+                </form>
+            </div>
+            </div>
+            <div> 
+                <header class="title">Incident Description</header> 
+            <div class="incident-des">
+                <form id="incidentform">
+                <div class="form-group">
+                    <label for="sourceIP">Source IP</label>
+                    <input type="text" id="sourceIP" name="sourceIP">
+                </div>
+                <div class="form-group">
+                    <label for="sourcePort">Source Port</label>
+                    <input type="number" id="sourcePort" name="sourcePort">
+                </div>
+                <div class="form-group">
+                    <label for="destinationIP">Destination IP</label>
+                    <input type="text" id="destinationIP" name="destinationIP">
+                </div>
+                <div class="form-group">
+                    <label for="destinationPort">Destination Port</label>
+                    <input type="number" id="destinationPort" name="destinationPort">
+                </div>
+                <div class="form-group">
+                    <label for="timeline">Timeline</label>
+                    <input type="text" id="timeline" name="timeline">
+                </div>
+                <div class="form-group">
+                    <label for="accessObtained">Access Obtained</label>
+                    <textarea type="text" id="accessObtained" name="accessObtained"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="passwordCompromised">Password Compromised</label>
+                    <textarea type="text" id="passwordCompromised" name="passwordCompromised"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="damageDone">Damage Done</label>
+                    <textarea type="text" id="damageDone" name="damageDone"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="assetAffected">Asset Affected</label>
+                    <textarea type="text" id="assetAffected" name="assetAffected"></textarea>
+                </div>
+                </form>
+                </div>
+                </div>
+        </div>
+       
+
+        <footer>
+            <div class="form-group">
+                <label for="followUpAction">Follow up Action</label>
+                <textarea id="followUpAction" name="followUpAction"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="followUpAction">Additional Note</label>
+                <textarea id="followUpAction" name="followUpAction"></textarea>
+            </div>
+        </footer>
+    </body>
+</html>
