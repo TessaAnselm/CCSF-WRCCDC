@@ -1,7 +1,29 @@
-/* Incident Response Form and Tool Usage Report*/
+/* Incident Response Form */
+.error-text {
+    color: red;
+}
+
 .form-group {
     margin-bottom: 20px;
+    color:#417bcb;
 }
+
+/* Style the link like a button */
+.form-group a {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background-color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Change button color on hover */
+.form-group a:hover {
+    background-color: #0056b3; /* New color on hover */
+}
+
 
 footer {
     border: 2px solid #e20707;
@@ -60,6 +82,26 @@ footer {
     justify-content: center; 
 }
 
+.infoBox {
+    max-width: 1000px;
+    background-color: white;
+    margin-left: 30px;
+    margin-right: 30px;
+    min-width: 1000px;
+    flex-direction: row;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+
+.infoBox ul {
+    list-style: none;
+    padding-left: 0; /* Optionally remove the left padding */
+}
+
 .incident-des {
         border: 1d0e6b; height: 100%; min-width: 700px; max-width: 800px; 
         background-color: white; padding-top :17px; padding-bottom: 17px;
@@ -84,19 +126,17 @@ footer {
     justify-items: center;
 }
 
-.nameField {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold; color:#417bcb;
-    display: inline-block;
-}
-.nameField label {
-    display: inline-block; width:5em;
+.policyBox {
+    background-color: #e33c3c;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* To center vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
 }
 
-.numField {
-    width: 60%;
-    text-align: center;
-}
 
 .right-image {
     max-width: 100%; /* push image to right */
