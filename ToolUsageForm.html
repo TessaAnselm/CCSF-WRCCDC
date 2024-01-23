@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CCSF Tool Usage Form</title>
+    <!-- This is a webpage that contains incident response form -->
+    <meta name="description" content="This form will be use to process formal incident response claim.">
+    <link rel="stylesheet" type="text/css" href="hw3style.css">    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    </head>
+
+    <body >
+        <header class = "header-background">
+            <div class="header-container">
+                <a href="ToolUsageForm.htmlForm" class="header-text">CCSF Tool Usage Form</a> 
+                <figure>
+                <a href="https://www.ccsf.edu/">
+                <img src="ccsf_ram.gif" alt="ccsf ram logo" width="139" class="right-image">
+                </a>
+                </figure>
+            </div>     
+        </header>
+
+        <div class="id-form">  
+            <div class="form-group">
+                <label for="reportedBy">Reported by</label>
+                <input type="text" id="reportedBy" name="reportedBy">
+            </div>
+            <div class="form-group">
+                <label for="titleRole">Title/Role</label>
+                <input type="text" id="titleRole" name="titleRole">
+            </div>
+            <div class="form-group">
+                <label for="dateOfReport">Date of Report</label>
+                <input type="date" id="dateOfReport" name="dateOfReport">
+            </div>
+            <div class="form-group">
+                <label for="incidentNumber">Tool Name</label>
+                <input type="text" id="incidentNumber" name="incidentNumber">
+            </div>
+            
+        </div>   
+
+        <div class="id-tool-sum">
+            <label for="execSummary">Executive Summary </label>
+            <textarea id="execSummary" name="execSummary" style="width: 850px;"></textarea>
+        </div>  
+
+        <div class="incident-info-form">    
+            <div> 
+                <header class="title">Tool Usage Information</header> 
+            <div class="tool-info">
+                    <div class="form-group">
+                        <label for="reportPurpose">Purpose of Report</label>
+                        <textarea id="reportPurpose" name="reportPurpose" style="width: 850px;"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="toolOverview">Overview of Tool</label>
+                        <textarea id="toolOverview" name="toolOverview" style="width: 850px;"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="toolAnalysis">Tool Usage Analysis</label>
+                        <textarea id="toolAnalysis" name="toolAnalysis" style="width: 850px;"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="userFeeback">User Feedback</label>
+                        <textarea id="userFeeback" name="userFeeback" style="width: 850px;"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="challengeSolution">Tool Challenges and Solution</label>
+                        <textarea id="challengeSolution" name="challengeSolution" style="width: 850px;"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="recommendation">Recommendation</label>
+                        <textarea id="recommendation" name="recommendation" style="width: 850px;"></textarea>
+                    </div>
+            </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="form-group">
+                <label for="conclusion">Conclusion</label>
+                <textarea id="conclusion" name="conclusion" style="width: 850px;"></textarea>
+            </div>
+        </footer>
+    </body>
+</html>
