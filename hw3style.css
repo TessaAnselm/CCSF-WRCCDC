@@ -1,10 +1,6 @@
-/* Incident Response Form */
-.error-text {
-    color: red;
-}
-
+/* Incident Response Form and Tool Usage Report*/
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 footer {
@@ -48,6 +44,7 @@ footer {
 .incident-info-form {
     background-color: #e33c3c;
     height: 100%;
+    text-align: center;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -55,7 +52,7 @@ footer {
 }
 
 .incident-info {
-    border: 1d0e6b; height: 100%; width: 700px; 
+    border: 1d0e6b; height: 100%; min-width: 700px; max-width: 800px;
     background-color: white; padding-top :17px; padding-bottom: 17px;
     text-align: right;
     display: flex;
@@ -64,7 +61,7 @@ footer {
 }
 
 .incident-des {
-        border: 1d0e6b; height: 100%; width: 700px; 
+        border: 1d0e6b; height: 100%; min-width: 700px; max-width: 800px; 
         background-color: white; padding-top :17px; padding-bottom: 17px;
         text-align: right;
         display: flex;
@@ -78,6 +75,12 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    justify-items: center;
+}
+
+.id-tool-sum {
+    background-color: black; text-align: center; padding: 10px; 
+    color: aliceblue;
     justify-items: center;
 }
 
@@ -106,4 +109,12 @@ footer {
     font-weight: bolder;
     color: aliceblue;
     font-size: 22px;
+}
+
+.tool-info {
+    border: 1d0e6b; height: 100%; min-width: 1000px;
+    background-color: white; padding:17px;
+    text-align: right;
+    display: inline-block;
+   
 }
