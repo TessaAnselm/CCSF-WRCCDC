@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Incident Response Policy on Form Filling</title>
+    <!-- This is a webpage that contains incident response form filling policy -->
+    <meta name="description" content="This form will be used to process formal incident response claims.">
+    <link rel="stylesheet" type="text/css" href="hw3style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header class="header-background">
+        <div class="header-container">
+            <a href="Incident%20Response.html" class="header-text">CCSF Incident Response Policy on Form Filling</a>
+            <figure>
+                <a href="https://www.ccsf.edu/">
+                    <img src="ccsf_ram.gif" alt="ccsf ram logo" width="139" class="right-image">
+                </a>
+            </figure>
+        </div>
+    </header>
+
+    <div class="id-form">
+        <div class="form-group">
+            <label for="dateOfReport">Date of Policy</label>
+            <input type="date" id="dateOfReport" name="dateOfReport">
+        </div>
+    </div>
+
+    <div class="policyBox">
+        <div>
+            <header class="title">1. Introduction</header>
+            <div class="infoBox">
+            <p>
+            <strong>1.1 Purpose</strong> <br>
+                The purpose of this policy is to provide guidelines and procedures for accurately and consistently filling out incident response forms during the incident handling process. <br>
+                Proper form filling is essential for documenting incidents comprehensively and facilitating effective incident response.
+            </p>
+            <p>
+            <strong>1.2 Scope</strong> <br>
+                This policy applies to all incident response team members and individuals involved in the documentation of security incidents within our organization.
+            </p>
+            </div>
+            <br>
+            <header class="title">2. Roles and Responsibilities</header>
+            <div class="infoBox">
+            <p>
+                <strong>2.1 Form Filling Responsibilities</strong> <br>
+                Incident responders are responsible for completing incident response forms accurately and comprehensively. <br>
+                Incident coordinators are responsible for overseeing the form-filling process and ensuring that all necessary information is captured.<br>
+                All individuals involved in incident handling must cooperate with incident responders and provide accurate information for form filling.
+            </p>
+            </div>
+            <br>
+            <header class="title">3. Incident Response Forms</header>
+            <div class="infoBox">
+            <p>
+                <strong>3.1 Form Structure </strong><br>
+                The incident response form consists of the following fields, each of which serves a specific purpose in documenting incidents:
+            </p>    
+                <ul>
+                    <li><strong>Reported by:</strong> The individual or entity reporting the incident should provide their name or organization's name.</li>
+                    <li><strong>Title/Role:</strong> Specify the title or role of the person completing the form.</li>
+                    <li><strong>Date of Report:</strong> Enter the date when the incident is officially reported, following the format MM/DD/YYYY.</li>
+                    <li><strong>Incident Number:</strong> Assign an incident number with year, month, day, and preparer initial to each incident for tracking and reference purposes. <br>
+                        If the preparer has filled more than 1 form for the day, add v followed by the number. <br>
+                        For example, 20240122-TA-V2 for date, first and last name initial, and V2 indicating the 2nd form filled.</li>
+                    <li><strong>Incident Type:</strong> Indicate the type or category of the incident (e.g., data breach, malware infection).</li>
+                    <li><strong>Date of Incident:</strong> Record the date when the incident occurred (MM/DD/YYYY).</li>
+                    <li><strong>Time of Incident:</strong> Document the exact time of the incident (HH:MM AM/PM).</li>
+                    <li><strong>Date of Detection:</strong> Enter the date when the incident was first detected (MM/DD/YYYY).</li>
+                    <li><strong>Status:</strong> Describe the status of the incident (e.g., under investigation, resolved).</li>
+                    <li><strong>Location:</strong> Specify the location or context where the incident occurred.</li>
+                    <li><strong>Name/Role/Contact of Parties Involved:</strong> Provide the names, roles, and contact information of individuals involved in the incident.</li>
+                    <li><strong>Source IP:</strong> Capture the source IP address of the incident.</li>
+                    <li><strong>Source Port:</strong> Include the source port used in the incident.</li>
+                    <li><strong>Destination IP:</strong> Document the destination IP address affected by the incident or IP of the breached system.</li>
+                    <li><strong>Destination Port:</strong> Specify the destination port impacted by the incident.</li>
+                    <li><strong>Timeline:</strong> Create a chronological timeline of events related to the incident, including any unusual or noteworthy characteristics.</li>
+                    <li><strong>Access Obtained:</strong> Indicate whether unauthorized access was obtained during the incident.</li>
+                    <li><strong>Password Compromised:</strong> Specify if any passwords were compromised.</li>
+                    <li><strong>Impact on Service:</strong> Describe the impact of the incident on services or systems.</li>
+                    <li><strong>Impact on Information:</strong> Explain the impact on sensitive or confidential information.</li>
+                    <li><strong>Asset Affected:</strong> Identify the specific assets or resources affected by the incident.</li>
+                    <li><strong>Follow-Up Actions:</strong> Outline the follow-up actions taken in response to the incident, including containment, eradication, recovery, and mitigation measures.</li>
+                    <li><strong>Additional Notes:</strong> Include any additional notes, observations, or comments that may provide further context or insights into the incident.</li>
+                </ul>
+            </div>
+            <br>
+            <header class="title">4. Guidelines for Form Filling</header>
+            <div class="infoBox">
+            <p> <strong>4.1 Reporting and Form Completion </strong><br>
+                Incidents should be reported promptly to the incident response team.<br>
+                Complete the incident response form accurately and comprehensively. <br>
+                Use N/A when a specific field is not applicable to the incident. <br>
+                Follow the specified date and time formats when recording incident-related dates and times.<br>
+                Ensure consistency and clarity in documenting incident details. <br>
+            </p>
+            </div>
+            <br>
+            <header class="title">5. Documentation Standards</header>
+            <div class="infoBox">
+            <p> <strong>5.1 Consistency and Completeness</strong><br>
+                Maintain consistency in form filling across all incidents.<br>
+                Ensure that the form is completed in its entirety and that no critical information is omitted.<br>
+            </p>
+            </div>
+            <br>
+            <header class="title">6. Training and Awareness</header>
+            <div class="infoBox">
+            <p><strong>6.1 Training Programs</strong><br>
+            Ensure that all incident response team members receive training on proper form filling procedures.<br>
+            Promote awareness of the importance of accurate form completion for effective incident response.<br>
+            </p>
+            </div>
+            <br>
+            <header class="title">7. Review and Revision</header>
+            <div class="infoBox">
+            <p><strong>7.1 Form Review </strong><br>
+            Periodically review and update the incident response forms and associated form filling procedures to align with evolving organizational needs and best practices.<br>
+            By adhering to this "Incident Response Policy on Form Filling," our organization aims to maintain consistent and thorough documentation of security incidents, ultimately enhancing our ability to respond effectively to incidents and protect our assets and information.<br>
+            </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="form-group">
+            Link to Incident Policy Form: <a href="https://raw.githack.com/TessaAnselm/CCSF-WRCCDC/main/Incident%20Response.html">Incident Policy Form</a>
+        </div>
+    </footer>
+</body>
+</html>
