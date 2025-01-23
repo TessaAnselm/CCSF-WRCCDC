@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Response Report</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea, select {
+            display: block;
+            width: 100%;
+            margin-top: 5px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        fieldset {
+            border: 2px solid #007BFF;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        legend {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body onload="loadIncidentNumber()">
+
+    <div class="container">
+        <h2>Incident Response Report</h2>
+
+        <form id="incidentForm">
+            <fieldset>
+                <legend>Organization Details</legend>
+                <label>Organization Name: <input type="text" id="organizationName" placeholder="Enter organization/team name"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Incident Details</legend>
+                <label>Incident Number: <input type="number" id="incidentNumber"></label>
+                <label>Reported By: <input type="text" id="reportedBy" placeholder="Your Name"></label>
+                <label>Incident Date & Time: <input type="datetime-local" id="incidentDate"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Type of Incident</legend>
+                <select id="incidentType">
+                    <option value="Malware">Malware</option>
+                    <option value="Breach">Data Breach</option>
+                    <option value="Denial of Service (DoS)">Denial of Service (DoS)</option>
+                    <option value="Phishing">Phishing Attack</option>
+                    <option value="Unauthorized Access">Unauthorized Access</option>
+                    <option value="Other">Other (Specify Below)</option>
+                </select>
+                <textarea id="otherIncidentType" placeholder="If 'Other', describe the attack"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Incident Description</legend>
+                <textarea id="incidentDescription" placeholder="Provide a detailed description of the incident"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Attack Details</legend>
+                <label>Source IP (Attacker) *REQUIRED*: <input type="text" id="sourceIP" placeholder="e.g., 192.168.1.100"></label>
+                <label>Breached System IP: <input type="text" id="breachedIP" placeholder="e.g., 10.0.0.5"></label>
+                <textarea id="attackVector" placeholder="Describe how the attack was carried out"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Impact Assessment</legend>
+                <label>Impact on Services: <textarea id="impactServices" placeholder="Affected services, downtime"></textarea></label>
+                <label>Impact on Data: <textarea id="impactData" placeholder="Were records accessed, modified, or stolen?"></textarea></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Mitigation & Response Actions</legend>
+                <textarea id="mitigationSteps" placeholder="Describe containment actions, patches applied, recovery steps"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Lessons Learned</legend>
+                <textarea id="lessonsLearned" placeholder="What could be improved in response strategy?"></textarea>
+            </fieldset>
+
+            <button type="button" onclick="generatePDF()">Generate PDF</button>
+
+        </form>
+    </div>
+
+    <script>
+        function loadIncidentNumber() {
+            let incidentNumber = localStorage.getItem("incidentNumber") || 1000;
+            document.getElementById("incidentNumber").value = incidentNumber;
+        }
+
+        function incrementIncidentNumber() {
+            let incidentNumber = parseInt(document.getElementById("incidentNumber").value);
+            incidentNumber++;
+            localStorage.setItem("incidentNumber", incidentNumber);
+        }
+
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            let sourceIP = document.getElementById("sourceIP").value.trim();
+            if (!sourceIP) {
+                alert("ERROR: Incident reports missing a Source IP will be rejected!");
+                return;
+            }
+
+            let incidentData = [
+                ["Incident Number", document.getElementById("incidentNumber").value],
+                ["Reported By", document.getElementById("reportedBy").value],
+                ["Incident Date", document.getElementById("incidentDate").value],
+                ["Incident Type", document.getElementById("incidentType").value],
+                ["Other Incident Type", document.getElementById("otherIncidentType").value],
+                ["Incident Description", document.getElementById("incidentDescription").value],
+                ["Source IP (Attacker)", document.getElementById("sourceIP").value],
+                ["Breached System IP", document.getElementById("breachedIP").value],
+                ["Attack Vector", document.getElementById("attackVector").value],
+                ["Impact on Services", document.getElementById("impactServices").value],
+                ["Impact on Data", document.getElementById("impactData").value],
+                ["Mitigation Actions", document.getElementById("mitigationSteps").value],
+                ["Lessons Learned", document.getElementById("lessonsLearned").value]
+            ];
+
+            doc.setFontSize(16);
+            doc.text(document.getElementById("organizationName").value || "Incident Response Report", 10, 10);
+            
+            doc.autoTable({
+                startY: 20,
+                head: [["Field", "Details"]],
+                body: incidentData,
+                theme: 'grid',
+                styles: { fontSize: 10 }
+            });
+
+            doc.save(`Incident_Report_${document.getElementById("incidentNumber").value}.pdf`);
+
+            incrementIncidentNumber();
+            loadIncidentNumber();
+        }
+    </script>
+
+</body>
+</html>
